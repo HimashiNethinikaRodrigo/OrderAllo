@@ -103,14 +103,24 @@ public class Signup extends AppCompatActivity {
                     Toast.makeText(Signup.this, "User registration successful", Toast.LENGTH_SHORT).show();
                     addDataToDatabase();
                 } else {
-                    Toast.makeText(Signup.this, "User registration fail", Toast.LENGTH_SHORT).show();
-                    progressDialog.dismiss();
+//                    Toast.makeText(Signup.this, "User registration fail", Toast.LENGTH_SHORT).show();
+//                    progressDialog.dismiss();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 System.out.println("ERROR " + e);
+                if (e.getMessage().contains("WEAK_PASSWORD")){
+                    Toast.makeText(Signup.this, "User registration fail. Password is not strong.", Toast.LENGTH_SHORT).show();
+                    progressDialog.dismiss();
+                }else if(e.getMessage().contains("The email address is badly formatted")){
+                    Toast.makeText(Signup.this, "User registration fail. Email is not valid.", Toast.LENGTH_SHORT).show();
+                    progressDialog.dismiss();
+                }else if(e.getMessage().contains("The email address is already in use by another account")){
+                    Toast.makeText(Signup.this, "User registration fail. Email is not valid.", Toast.LENGTH_SHORT).show();
+                    progressDialog.dismiss();
+                }
             }
         });
     }

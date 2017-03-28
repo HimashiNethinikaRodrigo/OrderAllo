@@ -12,31 +12,36 @@
     tools:context="com.uom.project.orderallo.view.Signup"
     android:weightSum="1">
 
-    <LinearLayout
-
-        android:orientation="vertical"
-        android:layout_height="wrap_content"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_weight="0.06">
-
-        <EditText
-            android:id="@+id/edtEmail"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="email" />
+        android:layout_height="314dp"
+        android:src="@drawable/ic_action_signup" />
 
 
-        <EditText
-            android:id="@+id/edtPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="password" />
 
-        <Button
-            android:id="@+id/btnSignup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Signup" />
-    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:layout_weight="0.07" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        android:layout_weight="0.06" />
+
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Signup"
+        android:layout_weight="0.06"
+        android:background="@color/colorPrimary"/>
 
 </LinearLayout>

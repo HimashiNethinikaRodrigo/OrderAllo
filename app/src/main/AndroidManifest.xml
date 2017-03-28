@@ -14,14 +14,14 @@
 
         <service android:name=".service.MyService" />
 
-        <activity android:name=".Signup_">
+        <activity android:name=".view.Signup_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.Signin"></activity>
+        <activity android:name=".view.Signin_"></activity>
     </application>
 
 </manifest>
