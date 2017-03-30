@@ -68,7 +68,13 @@ public class Signup extends AppCompatActivity {
     @Click
     void btnSignup(View view){
         progressDialog.show();
-        registerUser();
+        if(!edtEmail.getText().toString().isEmpty() && !edtPassword.getText().toString().isEmpty()){
+            registerUser();
+        }else{
+            Toast.makeText(Signup.this, "Fill All the Fields", Toast.LENGTH_LONG).show();
+            progressDialog.dismiss();
+        }
+
     }
 
     private void addDataToDatabase() {
@@ -102,9 +108,10 @@ public class Signup extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     Toast.makeText(Signup.this, "User registration successful", Toast.LENGTH_SHORT).show();
                     addDataToDatabase();
-                } else {
-//                    Toast.makeText(Signup.this, "User registration fail", Toast.LENGTH_SHORT).show();
-//                    progressDialog.dismiss();
+                }
+                else {
+                    edtPassword.setText("");
+                    edtEmail.setText("");
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {

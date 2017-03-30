@@ -12,21 +12,24 @@
     tools:context="com.uom.project.orderallo.view.Signup"
     android:weightSum="1">
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="314dp"
-        android:src="@drawable/ic_action_signup" />
-
-
-
-
-    <EditText
-        android:id="@+id/edtPassword"
+    <TextView
+        android:text="Sign up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="password"
-        android:inputType="textPassword"
-        android:layout_weight="0.07" />
+        android:id="@+id/textView"
+        android:textColor="#94332a"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="46dp"
+        android:gravity="center"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="266dp"
+        android:src="@drawable/signup_pic" />
+
 
     <EditText
         android:id="@+id/edtEmail"
@@ -35,6 +38,14 @@
         android:hint="email"
         android:inputType="textEmailAddress"
         android:layout_weight="0.06" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:layout_weight="0.07" />
 
     <Button
         android:id="@+id/btnSignup"
