@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_splash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="40dp"
     android:layout_weight="10"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="com.uom.project.orderallo.view.Splash">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_weight="3">
 
         <ImageView
+           android:paddingRight="50dp"
+           android:paddingLeft="50dp"
+           android:paddingTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:src="@drawable/main_pic"
+            android:src="@drawable/logo"
             android:id="@+id/imageView" />
 
     </LinearLayout>
@@ -47,5 +49,6 @@
             android:id="@+id/progressBar"
             android:layout_weight="1" />
     </LinearLayout>
+
 
 </LinearLayout>
